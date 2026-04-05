@@ -121,8 +121,10 @@ public:
 #if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
     IteratorUniquePtr beginEntryList(const QString &path, QDirListing::IteratorFlags filters, const QStringList &filterNames) override;
     IteratorUniquePtr endEntryList() override;
-#elif QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+#elif QT_VERSION >= QT_VERSION_CHECK(6, 8, 1)
     IteratorUniquePtr beginEntryList(const QString &path, QDirListing::IteratorFlags filters, const QStringList &filterNames) override;
+    IteratorUniquePtr endEntryList() override;
+#elif QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
     IteratorUniquePtr beginEntryList(const QString &path, QDir::Filters filters, const QStringList &filterNames) override;
     IteratorUniquePtr endEntryList() override;
 #else
